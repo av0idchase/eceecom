@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const products = [
+  const placeholderProducts = [
     { name: "Booster Box", price: "$120", img: "images/product1.jpg" },
     { name: "Elite Trainer Box", price: "$50", img: "images/product2.jpg" },
     { name: "Graded Charizard", price: "$400", img: "images/product3.jpg" },
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const renderProducts = (containerId) => {
     const container = document.getElementById(containerId);
-    products.forEach(product => {
+    placeholderProducts.forEach(product => {
       const card = `
         <div class="col-md-3">
           <div class="card">
@@ -24,6 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   renderProducts('just-posted');
-  renderProducts('trending-products');
-  renderProducts('sale-products');
 });
