@@ -1,28 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
   const products = [
-    { name: "Booster Box 1", price: "$120", img: "images/product1.jpg" },
-    { name: "Booster Pack 2", price: "$4", img: "images/product2.jpg" },
-    { name: "Graded Card 3", price: "$45", img: "images/product3.jpg" },
+    { name: "Booster Box", price: "$120", img: "images/product1.jpg" },
+    { name: "Elite Trainer Box", price: "$50", img: "images/product2.jpg" },
+    { name: "Graded Charizard", price: "$400", img: "images/product3.jpg" },
+    { name: "Pikachu Pack", price: "$10", img: "images/product4.jpg" },
   ];
 
-  const renderProducts = (containerId, items) => {
+  const renderProducts = (containerId) => {
     const container = document.getElementById(containerId);
-    items.forEach(item => {
-      const product = `
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="${item.img}" class="card-img-top" alt="${item.name}">
+    products.forEach(product => {
+      const card = `
+        <div class="col-md-3">
+          <div class="card">
+            <img src="${product.img}" class="card-img-top" alt="${product.name}">
             <div class="card-body">
-              <h5 class="card-title">${item.name}</h5>
-              <p class="card-text">${item.price}</p>
+              <h5 class="card-title">${product.name}</h5>
+              <p class="card-text">${product.price}</p>
             </div>
           </div>
         </div>`;
-      container.innerHTML += product;
+      container.innerHTML += card;
     });
   };
 
-  renderProducts('just-posted', products);
-  renderProducts('trending-products', products);
-  renderProducts('sale-products', products);
+  renderProducts('just-posted');
+  renderProducts('trending-products');
+  renderProducts('sale-products');
 });
