@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const placeholderProducts = [
+  const products = [
     { name: "Booster Box", price: "$120", img: "images/product1.jpg" },
-    { name: "Elite Trainer Box", price: "$50", img: "images/product2.jpg" },
+    { name: "Trainer Box", price: "$50", img: "images/product2.jpg" },
     { name: "Graded Charizard", price: "$400", img: "images/product3.jpg" },
     { name: "Pikachu Pack", price: "$10", img: "images/product4.jpg" },
   ];
 
   const renderProducts = (containerId) => {
     const container = document.getElementById(containerId);
-    placeholderProducts.forEach(product => {
-      const card = `
+    products.forEach(product => {
+      container.innerHTML += `
         <div class="col-md-3">
           <div class="card">
             <img src="${product.img}" class="card-img-top" alt="${product.name}">
@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         </div>`;
-      container.innerHTML += card;
     });
   };
 
   renderProducts('just-posted');
+  renderProducts('trending-products');
 });
