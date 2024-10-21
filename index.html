@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Header with Navigation -->
+  <!-- Header Navigation -->
   <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">EvoCard Emporium</a>
@@ -22,42 +22,36 @@
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">🛒 Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">🛒 Cart</a></li>
         </ul>
       </div>
     </div>
   </header>
 
   <!-- Hero Section with YouTube Video -->
-  <div class="hero-section position-relative">
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1" 
-            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="hero-video"></iframe>
-    <div class="hero-overlay d-flex flex-column align-items-center justify-content-center">
-      <h1 class="display-3 text-white">EvoCard Emporium</h1>
-      <p class="lead text-white">Your go-to destination for Pokémon TCG cards!</p>
-    </div>
+  <div class="hero-section">
+    <h1 class="hero-title text-white text-center">EvoCard Emporium</h1>
+    <iframe 
+      class="hero-video" 
+      src="https://www.youtube.com/embed/DvebUMgxJFM?autoplay=1&mute=1&loop=1&playlist=DvebUMgxJFM" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
   </div>
 
   <!-- Product Sections -->
   <section class="container mt-5">
-    <h2>Just Posted Products</h2>
+    <h2 class="text-center text-gradient">Just Posted Products</h2>
     <div class="row" id="just-posted">
-      <!-- Product Cards Generated Here -->
+      <!-- Product Cards Go Here -->
     </div>
-    <a href="shop.html" class="btn btn-primary mt-3">See All Products</a>
+    <div class="text-center mt-3">
+      <a href="shop.html" class="btn btn-outline-light">See All Products</a>
+    </div>
   </section>
 
-  <section class="container mt-5">
-    <h2>Trending Products</h2>
-    <div class="row" id="trending-products"></div>
-  </section>
-
-  <section class="container mt-5">
-    <h2>On Sale</h2>
-    <div class="row" id="sale-products"></div>
-  </section>
-
-  <footer class="bg-dark text-white text-center p-3">
+  <footer class="bg-dark text-white text-center p-3 mt-5">
     <p>© 2024 EvoCard Emporium | All Rights Reserved</p>
   </footer>
 
